@@ -1,0 +1,23 @@
+{% extends "loja/base.html" %}
+
+{% block content %}
+    <h1>FINALIZAR COMPRA</h1>
+    <div class="row">
+        <div class="col-mn">
+            <h3>Produto    :</h3>
+            <h3>Quantidade :</h3>
+            <h3>Preço total:</h3>
+        </div>
+        <div class="col-mn">
+            <h3>   {{venda.produto}} </h3>
+            <h3>   {{venda.quantidade}}</h3>
+            <h3>   {{venda.vendaTotal}}</h3>
+        </div>
+    </div>  
+    <h3><button type="submit" > <a href="{% url 'catalogo' %}">Concluir</a> </button></h3>
+
+    
+   
+    
+
+{% endblock %}

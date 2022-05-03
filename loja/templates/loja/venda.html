@@ -1,0 +1,15 @@
+{% extends "loja/base.html" %}
+
+{% block content %}
+
+    <h2>{{produto.nome}}</h2>
+    
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'finalizar'  %} "><button type="submit">Finalizar Compra</button></a>
+    </form>
+   
+    
+
+{% endblock %}
+

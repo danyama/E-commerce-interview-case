@@ -1,0 +1,18 @@
+{% extends "loja/base.html" %}
+
+{% block content %}   
+    <p><h1>CATÁLOGO</h1></p>
+    <div class="row" >
+        {% for produto in produtos %}
+            <div class ="bloco" >
+                <la>
+                    <div class="c"><img src="{{produto.imagem.url}}" width="200" height="200"/></div>
+                    <h2>{{produto.nome_prod}}</h2> 
+                    <h2>R${{produto.preco_unit}}</h2>
+                    <h2><button type="submit" > <a href="{% url 'produto_detail_venda' pk=produto.pk%}">Comprar</a> </button></h2>
+                </la> 
+            </div>
+        <br>
+        {% endfor %}   
+    </div>
+{% endblock %}
